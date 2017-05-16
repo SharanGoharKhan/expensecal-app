@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: "brandon-grotesque" !important;
+}
+.navbar-container {
+  /* Less than tablet */
+}
+.navbar-container .navbar-menu {
+  background-color: #1c2127;
+}
+.navbar-container .navbar-menu #activeItem {
+  color: white;
+}
+.navbar-container .navbar-menu .navbar-left-menu > a {
+  color: white;
+}
+.navbar-container .navbar-menu .navbar-right-menu > a {
+  color: white;
+}
+.navbar-container .navbar-menu .navbar-right-menu > a .dropbox-menu {
+  color: white;
+}
+.navbar-container .navbar-menu .navbar-right-menu > a .dropbox-menu #dropboxIcon {
+  color: white;
+}
+@media (max-width: 750px) {
+  .navbar-container .navbar-menu {
+    display: none;
+  }
+  .navbar-container .hamburger-menu {
+    display: block;
+  }
+}
+.footer {
+  background: #f8f8f8;
+  text-align: center;
+}
+.footer .row {
+  margin-right: 0px;
+}
+.hamburger-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.hamburger-menu div {
+  display: none;
+}
+.hamburger-menu button {
+  position: absolute;
+  top: 30px;
+  right: 34px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8) url(http://i.imgur.com/vKRaKDX.png) center no-repeat;
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  background-size: 70%;
+  width: 40px;
+  height: 30px;
+  outline: none;
+  transition: all 400ms ease;
+  padding: 0px;
+}
+.hamburger-menu button.expanded {
+  transform: rotate(90deg);
+  background-color: transparent;
+  border: 0;
+}
+.hamburger-menu a {
+  display: block;
+  background: #eee;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+}
+.hamburger-menu a:hover,
+.hamburger-menu a:active,
+.hamburger-menu a:focus {
+  background: #e6e6e6;
+}
