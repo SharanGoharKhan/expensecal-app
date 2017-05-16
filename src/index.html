@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+	<head>
+	  <base href="/">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	  <title>ApnaImages</title>
+	  <!-- CORE CSS -->
+	  <link rel="stylesheet" type="text/css" href="css/library.min.css" >
+	  <link rel="stylesheet" type="text/css" href="css/main.min.css" >
+	  <!-- CORE JS -->
+	  <script src="js/library.min.js"></script>
+	  <script src="js/main.min.js"></script>
+	  <!-- Facebook authentication -->
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '2278505469041230',
+		      cookie     : true,
+		      xfbml      : true,
+		      version    : 'v2.8',
+		      status : true
+		    });
+		    //FB.AppEvents.logPageView();   
+		    FB.getLoginStatus(function(response){
+		    	if(response.status === 'connected')
+		    	{
+		    		//we are connected
+		    	}
+		    	else if(response.status === 'not_authorized')
+		    	{
+		    		//not auth
+		    	}
+		    	else
+		    	{
+		    		//we are not logged in to facebook
+		    	}
+		    })
+		  };
+
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
+	  <!-- End Facebook authentication -->
+	  <!-- Google authentication -->
+	  <script type="text/javascript">
+	  	(function()
+	  	{
+	  		var p = document.createElement('script');
+	  		p.type = 'text/javascript';
+	  		p.async = true;
+	  		p.src = 'https://apis.google.com/js/client.js?onload=onLoadFunction';
+	  		var a = document.getElementsByTagName('script')[0];
+	  		a.parentNode.insertBefore(p,a);
+
+	  	})();
+	  </script>
+	  <!-- End Google authentication -->
+	</head>
+	<body>
+		<ui-view></ui-view>
+	</body>
+</html>

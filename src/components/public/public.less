@@ -1,0 +1,94 @@
+.navbar-container
+{
+  	.navbar-menu
+    {
+      background-color: #1c2127;
+      #activeItem
+        {
+          color: white;
+        }
+      .navbar-left-menu > a
+      {
+        color: white;
+      }
+      .navbar-right-menu  > a
+      {
+        color: white;
+        .dropbox-menu
+        {
+          color: white;
+          #dropboxIcon
+          {
+            color: white;
+          }
+        }
+      }      
+    }
+    
+  	/* Less than tablet */
+    @media (max-width: 750px)
+     {
+          .navbar-menu {
+            display: none;
+          }
+          .hamburger-menu {
+                display: block;
+            }
+      }
+}
+.footer
+{
+	.row
+	{
+		margin-right: 0px;
+	}
+	background: #f8f8f8;
+	text-align: center;
+}
+.hamburger-menu {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 0;
+
+      div {
+        display: none;      
+      }
+
+      button {
+        position: absolute;
+        top: 30px;
+        right: 34px;
+        overflow: hidden;
+        background: rgba(255,255,255,.8) url(http://i.imgur.com/vKRaKDX.png) center no-repeat;
+        border: 1px solid #ddd;
+        border-radius: 0px;
+        background-size: 70%;
+        width: 40px;
+        height: 30px;
+        outline: none;
+        transition: all 400ms ease;
+        padding: 0px;
+            
+        &.expanded {
+            transform: rotate(90deg);
+            background-color: transparent;
+            border: 0;
+        }
+      }
+
+      a {
+        display: block;
+        background: #eee;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+        text-decoration: none;
+        color: #222;
+        font-weight: bold;
+            
+        &:hover, &:active, &:focus {
+           background: darken(#eee, 3%);
+        }
+      }
+}
