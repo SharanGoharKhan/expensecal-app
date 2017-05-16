@@ -13,7 +13,7 @@
             
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" ui-sref="app.public.join">Logout</a></li>
             	</ul>
             </div>
         </header>
@@ -71,20 +71,8 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-
-              
+            <ui-view></ui-view>              
           </section>
       </section>
-
-      <!--main content end-->
-      <!--footer start-->
-      <footer class="site-footer">
-          <div class="text-center">
-              2017 - Aspire Logic
-              <a href="index.html#" class="go-top">
-                  <i class="fa fa-angle-up"></i>
-              </a>
-          </div>
-      </footer>
-      <!--footer end-->
+      
   </section>

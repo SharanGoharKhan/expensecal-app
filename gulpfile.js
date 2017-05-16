@@ -86,7 +86,7 @@ gulp.task('serve', function(){
 	browserSync({
 	  notify: false,
 	  port: 9000,
-	  host: 'app.apnaimages.dev',
+	  host: 'app.expensecal.dev',
 	  open: 'external',
 	  server: {
 	    baseDir: ['dist']

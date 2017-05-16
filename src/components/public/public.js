@@ -25,6 +25,6 @@ app.controller("PublicController", function ($scope,$rootScope,localStorageServi
 		$rootScope.user = null;
 		$scope.user = null;
 		$scope.$apply();
-		$state.go("app.public.join");
+		$state.go("app.public.signin");
 	}
 });

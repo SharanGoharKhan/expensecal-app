@@ -7,8 +7,8 @@ app.run(function($rootScope, $location, $state,$moment,localStorageService){
 	var protocol = "http";
 	$rootScope.app = {
 		"name" : "ApnaImages",
-		"apiUrl" : protocol + "://api.apnaimages." + env,
-		"appUrl" : protocol + "://app.myndplan." + env,
+		"apiUrl" : protocol + "://api.expensecal." + env,
+		"appUrl" : protocol + "://app.expensecal." + env,
 		"env" : env
 	};
 	$rootScope.user=localStorageService.get("$user");

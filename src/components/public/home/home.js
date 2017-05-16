@@ -10,5 +10,5 @@ app.config(function($stateProvider){
 }); 
 
 app.controller("HomeController", function ($scope,$rootScope) {
-	
+	$scope.message = "home controller";
 });
