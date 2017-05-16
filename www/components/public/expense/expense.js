@@ -10,4 +10,4 @@ app.config(function($stateProvider){
 });
 app.controller("ExpenseController", function ($scope,$rootScope,localStorageService,$state) {
 $scope.message="Expense controller";
-} 
+}); 

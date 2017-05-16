@@ -10,4 +10,4 @@ app.config(function($stateProvider){
 });
 app.controller("SignupController", function ($scope,$rootScope,localStorageService,$state) {
 $scope.message="Signup controller";
-} 
+}); 

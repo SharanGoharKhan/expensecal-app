@@ -10,4 +10,4 @@ app.config(function($stateProvider){
 });
 app.controller("PublicController", function ($scope,$rootScope,localStorageService,$state) {
 $scope.message="public controller";
-} 
+}); 

@@ -10,4 +10,4 @@ app.config(function($stateProvider){
 });
 app.controller("HomeController", function ($scope,$rootScope,localStorageService,$state) {
 $scope.message="home controller";
-} 
+}); 

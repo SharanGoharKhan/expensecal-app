@@ -10,4 +10,4 @@ app.config(function($stateProvider){
 });
 app.controller("CategoryController", function ($scope,$rootScope,localStorageService,$state) {
 $scope.message="Category controller";
-} 
+}); 
