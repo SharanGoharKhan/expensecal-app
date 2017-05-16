@@ -106,16 +106,6 @@ gulp.task('serve', function(){
 	gulp.watch('src/**/*.js',['scripts']);
 });	
 
-// gulp.task('purge-cache', function() {
-// 	var options = {
-// 		token  : 'c36f350fb5c870e6ae22f6c2f5617c23',
-// 		email  : 'asif@probist.com',
-// 		domain : 'hireninja.co'
-// 	};
- 
-// 	cloudflare(options);
-// });
-
 gulp.task('dest', function() {
 	runSequence('bower','index','templates','scripts', 'less', 'imgs');
 });

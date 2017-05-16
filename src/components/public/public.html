@@ -1,67 +1,90 @@
-<header class="navbar-container">
-	<div class="ui large top fixed hidden menu navbar-menu">
-		<div class="ui container navbar-left-menu">
-			<a class="active item" id="activeItem">Photos</a>
-			<a class="item">Illustration</a>
-			<a class="item">Videos</a>
-			<a class="item">Audio</a>
-			<div class="right menu navbar-right-menu">
-				<div nav-bar-dropbox class="ui dropdown item navbar-items dropbox-menu" style="color: white">
-					Explore
-					<i class="dropdown icon" style="color: white"></i>
-					<div class="menu">
-						<div class="item">Action</div>
-      					<div class="item">Another Action</div>
-      					<div class="item">Something else here</div>
-      					<div class="divider"></div>
-      					<div class="item">Separated Link</div>
-      					<div class="divider"></div>
-      					<div class="item">One more separated link</div>
-					</div>
-				</div>
-				<a class="item navbar-items">Pricing</a>
-				<div ng-if="user" nav-bar-dropbox class="ui dropdown item navbar-items dropbox-menu" style="color: white">
-					{{user.first_name}}
-					<i class="dropdown icon" style="color: white"></i>
-					<div class="menu">
-						<div class="item">My Profile</div>
-      					<div class="item"><a ui-sref="app.public.profile.edit_profile">Edit Profile</a></div>
-      					<div class="divider"></div>
-      					<div class="item">My Downloads</div>
-      					<div class="item">My Uploads</div>
-					</div>
-				</div>
-				<a ng-if="user" ng-click="signout()" class="item navbar-items">SIGN OUT</a>
-				<a ng-if="!user" class="item navbar-items" ui-sref="app.publicgis.join">SIGN IN-or-REGISTER</a>
-			</div>
-		</div>
-	</div>
-</header>
-<ui-view></ui-view>
-<footer class="footer">
-	<div class="ui grid">
-			<div class="four wide column">
-				<h4>Company Info</h4>
-				<p><a href="#">Home</a></p>
-				<p><a href="#">About Us</a></p>
-				<p><a href="#">Press Releases</a></p>
-				<p><a href="#">Testimonials</a></p>
-				<p><a href="#">Image Research</a></p>
-			</div>
-			<div class="four wide column">
-				<h4>Learn More</h4>
-				<p><a href="#">Licensing</a></p>
-				<p><a href="#">Terms of Use</a></p>
-				<p><a href="#">Privacy Policy</a></p>
-			</div>
-			<div class="four wide column">
-				<h4>Need Help</h4>
-				<p><a href="#">Contact Us</a></p>
-				<p><a href="#">Search Tips</a></p>
-				<p><a href="#">FAQ</a></p>
-			</div>
-			<div class="four wide column">
-			<a ui-sref="app.public.examples">Go to examples</a>
-			</div>
-	</div>
-</footer>
+<section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>Expense calculator</b></a>
+            <!--logo end-->
+            
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="login.html">Logout</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              
+              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+              	  <h5 class="centered">Marcel Newman</h5>
+              	  	
+                  <li class="mt">
+                      <a class="active" href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-desktop"></i>
+                          <span>Expense</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="general.html">Expense List</a></li>
+                          <li><a  href="buttons.html">Create Expense</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Category</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="calendar.html">Category List</a></li>
+                          <li><a  href="gallery.html">Create Category</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+
+              
+          </section>
+      </section>
+
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2017 - Aspire Logic
+              <a href="index.html#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
