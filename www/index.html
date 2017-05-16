@@ -28,9 +28,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
 
-  <body>
     <!-- js placed at the end of the document so the pages load faster -->
     <!-- Download angular and it's libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
@@ -38,7 +36,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/restangular/1.5.1/restangular.js"></script>
     <!-- Add script files of project -->
     <script src="core/app.js"></script>
-
+    <script src="core/route.js"></script>
     <!-- Add js components of project -->
     <script src="components/public/public.js"></script>
     <script src="components/public/signup/signup.js"></script>
@@ -64,7 +62,10 @@
 
     <!--script for this page-->
     <script src="assets/js/sparkline-chart.js"></script>    
-	<script src="assets/js/zabuto_calendar.js"></script>	
-    
+    <script src="assets/js/zabuto_calendar.js"></script>    
+  </head>
+
+  <body>
+    <ui-view></ui-view>
   </body>
 </html>
