@@ -8,12 +8,12 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Expense calculator</b></a>
+            <a ui-sref="app.public.home" class="logo"><b>Expense calculator</b></a>
             <!--logo end-->
             
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" ui-sref="app.public.join">Logout</a></li>
+                    <li><a class="logout" ui-sref="app.public.signin">Logout</a></li>
             	</ul>
             </div>
         </header>
@@ -32,7 +32,7 @@
               	  <h5 class="centered">Marcel Newman</h5>
               	  	
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a class="active" ui-sref="app.public.home">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>

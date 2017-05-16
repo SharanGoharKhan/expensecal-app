@@ -4,18 +4,18 @@
         <form class="form-login" action="index.html">
             <h2 class="form-login-heading">sign up now</h2>
             <div class="login-wrap">
-                <input type="text" class="form-control" placeholder="User ID" autofocus>
+                <input type="text" class="form-control" placeholder="User ID" ng-model="user.username" autofocus>
                 <br>
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
         		<br>
-        		<input type="email" class="form-control" placeholder="Email">
+        		<input type="email" class="form-control" placeholder="Email" ng-model="user.email">
         		<br>
         		<input type="radio" name="gender" value="male" checked> Male<br>
 			    <input type="radio" name="gender" value="female"> Female<br>
 			    <input type="radio" name="gender" value="other"> Other
 			    <br>
 			    <p>Date of birth</p>
-			    <input type="date" name="bday">
+			    <input type="date" name="bday" ng-model="user.dob">
 			    <br>
                 <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN UP</button>
                 <br>

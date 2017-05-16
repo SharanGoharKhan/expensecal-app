@@ -10,9 +10,9 @@ app.run(function($rootScope, $http, Restangular,$location){
 	var env = $location.host().split('.').pop();
 	var protocol = (env == 'com') ? "https" : "http";
 	$rootScope.app = {
-  	    "name" : "ApnaImages",
-  	    "apiUrl": protocol +"://api.apnaimages." + env,
-        "appUrl": protocol +"://app.apnaimages." + env,
+  	    "name" : "ExpenseCal",
+  	    "apiUrl": protocol +"://api.expensecal." + env,
+        "appUrl": protocol +"://app.expesecal." + env,
         "env": env
   	};
     Restangular.setBaseUrl($rootScope.app.apiUrl);
