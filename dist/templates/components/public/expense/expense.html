@@ -1,4 +1,4 @@
-<h2>Create Expense</h2>
+<h2>Expense</h2>
 <div class="container">
 	<form class="form" ng-submit="addExpense()">
 		<input type="text" placeholder="Expense amount" ng-model="expense.amount" ng-required>
@@ -12,5 +12,7 @@
 		  </ul>
 		</div>
 		<button class="btn btn-primary" type="submit">Add Expense</button>
-	</form>	
+	</form>
+	<button type="button" class="btn btn-success" ng-click="showExpense()">Show all Expenses</button>
+	{{allExpenses}}
 </div>
