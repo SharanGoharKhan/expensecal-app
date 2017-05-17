@@ -5,11 +5,13 @@ app.directive('exDropdown', [function() {
 		restrict: 'A',
 		scope: false,
 		link: function(scope, element, attrs) {
+      var result;
     		$(function(){
           $(".dropdown-menu li a").click(function(){
           $(".btn:first-child").text($(this).text());
-          $(".btn:first-child").val($(this).text());
+          result = $(".btn:first-child").val($(this).text());
         });
+        // var cat=element[0].querySelector('a');
       });
 		}
 	};

@@ -11,19 +11,25 @@ app.config(function($stateProvider){
 				$categories: function(Restangular)
 				{
 					return Restangular.all('categories').getList(); 
+				},
+				$expenses: function(Restangular)
+				{
+					return Restangular.all('expense').getList();
 				}
 			}
 		})
 }); 
-app.controller("ExpenseController", function ($scope,Restangular,$categories) {
+app.controller("ExpenseController", function ($scope,Restangular,$categories,localStorageService,$expenses) {
+	var baseExpense = $expenses;
+	$scope.expense={};
+	$scope.user = localStorageService.get('$user');
 	$scope.categories=$categories;
-	$(function(){
-
-	    $(".dropdown-menu li a").click(function(){
-
-	      $(".btn:first-child").text($(this).text());
-	      $(".btn:first-child").val($(this).text());
-
-	   });
-	});
+	//TO DO fix hard coded value
+	$scope.expense.user_id = $scope.user.id;
+	$scope.expense.category_id = 1;
+	$scope.addExpense = function()
+	{
+		baseExpense.post($scope.expense);
+		// Restangular.post('expense',$scope.expense);
+	}
 });
