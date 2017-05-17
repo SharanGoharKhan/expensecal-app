@@ -9,6 +9,7 @@
 		<table class="table">
 		  <thead>
 		    <tr>
+		      <th>Edit</th>
 		      <th>Category Id</th>
 		      <th>Name</th>
 		      <th>Deleted At</th>
@@ -17,14 +18,20 @@
 		  </thead>
 		  <tbody>
 		    <tr ng-repeat="cat in category">
-		      <th scope="row">{{cat.id}}</th>
+		      <th scope="row"><input type="radio" ng-click="editData.category = cat"></th>
+		      <td>{{cat.id}}</td>
 		      <td>{{cat.name}}</td>
 		      <td>{{cat.deleted_at}}</td>
 		      <td>{{cat.created_at}}</td>
-		      <td><button class="btn btn-primary" ng-click="editCategory()">Edit Category</button></td>
 		    </tr>
 		  </tbody>
 		</table>
+		<td><button class="btn btn-primary" ng-click="editCategory()">Edit Category</button></td>
+	</div>
+	<div ng-if='showEditForm == "true" '>
+		<h5>Edit Category Name</h5>
+		<input type="text" placeholder="{{editData.category.name}}" ng-model="category.updated_category_name">
+		<button class="btn btn-primary" ng-click="updateCategory()">Confirm</button>
 	</div>
 </div>
 <ui-view></ui-view>

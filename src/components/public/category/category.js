@@ -17,6 +17,8 @@ app.config(function($stateProvider){
 }); 
 
 app.controller("CategoryController", function ($scope, $rootScope,$categories) {
+	$scope.editData={};
+	$scope.showEditForm="false";
 	$scope.addCategory = function()
 	{
 		var baseCategory = $categories;
@@ -29,5 +31,11 @@ app.controller("CategoryController", function ($scope, $rootScope,$categories) {
 	$scope.editCategory = function()
 	{
 		console.log("Edit Category called");
+		console.log($scope.editData.category.id);
+		$scope.showEditForm = "true";
+	}
+	$scope.updateCategory = function()
+	{
+		console.log($scope.category.updated_category_name);
 	}
 });
