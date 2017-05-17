@@ -16,7 +16,7 @@ app.controller("PublicController", function ($scope,$rootScope,localStorageServi
 		console.log("user is not empty");
 	}
 	else
-		console.log("user is empty");
+		$state.go("app.public.signin");
 	console.log("Before signout: "+$scope.user);
 	$scope.signout = function()
 	{

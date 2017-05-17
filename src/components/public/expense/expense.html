@@ -1,2 +1,13 @@
-<h1>Expense</h1>
-{{message}}
+<h2>Create Expense</h2>
+<div class="container">
+	<input type="text" placeholder="Expense amount">
+	<input type="date" placeholder="Expense date">
+	<div class="btn-group">
+	  <button type="button" class="btn btn-theme dropdown-toggle" data-toggle="dropdown">
+	    Select Category <span class="caret"></span>
+	  </button>
+	  <ul class="dropdown-menu" role="menu">
+	    <li ex-dropdown ng-repeat="category in categories"><a href="#">{{category.name}}</a></li>
+	  </ul>
+	</div>
+</div>
