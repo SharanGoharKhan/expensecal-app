@@ -1,3 +1,30 @@
 <h1>Category</h1>
-{{message}}
+<div class="container">
+	<form class="form" ng-submit="addCategory()">
+		<input type="text" placeholder="Category name" ng-model="category.name" ng-required>
+		<button class="btn btn-primary" type="submit">Add Category</button>
+	</form>
+	<button type="button" class="btn btn-success" ng-click="showCategory()">Show all Category</button>
+	<div >
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th>Category Id</th>
+		      <th>Name</th>
+		      <th>Deleted At</th>
+		      <th>Created At</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="cat in category">
+		      <th scope="row">{{cat.id}}</th>
+		      <td>{{cat.name}}</td>
+		      <td>{{cat.deleted_at}}</td>
+		      <td>{{cat.created_at}}</td>
+		      <td><button class="btn btn-primary" ng-click="editCategory()">Edit Category</button></td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</div>
 <ui-view></ui-view>

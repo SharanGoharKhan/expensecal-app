@@ -14,5 +14,24 @@
 		<button class="btn btn-primary" type="submit">Add Expense</button>
 	</form>
 	<button type="button" class="btn btn-success" ng-click="showExpense()">Show all Expenses</button>
-	{{allExpenses}}
+	<div >
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th>User id</th>
+		      <th>Amount</th>
+		      <th>Date Expense</th>
+		      <th>Category Id</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="expense in allExpenses.data">
+		      <th scope="row">{{expense.user_id}}</th>
+		      <td>{{expense.amount}}</td>
+		      <td>{{expense.created_at}}</td>
+		      <td>{{expense.category_id}}</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
 </div>
