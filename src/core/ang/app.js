@@ -6,7 +6,7 @@ app.run(function($rootScope, $location, $state,$moment,localStorageService){
 	var env = $location.host().split('.').pop();
 	var protocol = "http";
 	$rootScope.app = {
-		"name" : "ApnaImages",
+		"name" : "Expensecal",
 		"apiUrl" : protocol + "://api.expensecal." + env,
 		"appUrl" : protocol + "://app.expensecal." + env,
 		"env" : env
