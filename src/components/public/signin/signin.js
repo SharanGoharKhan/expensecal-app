@@ -10,9 +10,8 @@ app.config(function($stateProvider){
 }); 
 
 app.controller("SigninController", function ($scope,$http,localStorageService,$rootScope,Restangular,$state) {
-	$scope.message= "signin controller";
-	$scope.login=function(type)
-	{		
+	$scope.login=function()
+	{
 		$http.post($scope.app.apiUrl+"/auth/login",$scope.user)
 			.then(function statusChangeCallback(response){
 				$rootScope.$user=response.data;
@@ -20,7 +19,7 @@ app.controller("SigninController", function ($scope,$http,localStorageService,$r
 				$state.go('app.public.home');
 			},function errorCallback(response)
 			{
-				
+				console.log("error");
 			});
 		
 	}
